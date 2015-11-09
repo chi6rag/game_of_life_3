@@ -16,6 +16,11 @@ module GameOfLife
       it 'is true for cell which is alive' do
         expect(cell.is_alive?).to eq(true)
       end
+
+      it 'is false for a cell which is not alive' do
+        cell = Cell.new(1, 1, false)
+        expect(cell.is_alive?).to eq(false)
+      end
     end
   end
 end

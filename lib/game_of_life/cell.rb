@@ -1,6 +1,7 @@
 module GameOfLife
   class Cell
-    def initialize(x, y, test)
+    def initialize(x, y, is_alive)
+      @is_alive = is_alive
     end
 
     def live_neighbours(cells)
@@ -8,7 +9,7 @@ module GameOfLife
     end
 
     def is_alive?
-      true
+      @is_alive
     end
   end
 end

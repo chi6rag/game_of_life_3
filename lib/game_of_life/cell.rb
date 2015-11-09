@@ -13,7 +13,8 @@ module GameOfLife
     end
 
     def ==(other)
-      false
+      return false unless other.is_a?(Cell)
+      true
     end
   end
 end

@@ -27,6 +27,10 @@ module GameOfLife
       it 'is false when cell is compared to nil' do
         expect(cell == nil).to eq(false)
       end
+
+      it 'is false when compared with non cell' do
+        expect(cell == 1).to eq(false)
+      end
     end
   end
 end

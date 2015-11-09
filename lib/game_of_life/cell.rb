@@ -25,6 +25,10 @@ module GameOfLife
       false
     end
 
+    def hash
+      1
+    end
+
     private
     def has_same_x_coordinates?(other)
       self.x == other.x

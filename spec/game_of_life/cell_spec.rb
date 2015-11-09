@@ -49,6 +49,13 @@ module GameOfLife
         expect(other_cell == cell).to eq(true)
       end
     end
-    
+
+    describe 'hash' do
+      it 'is same for two cells of same states' do
+        other_cell = Cell.new(1, 1, true)
+        expect(cell.hash).to eq(other_cell.hash)
+      end
+    end
+
   end
 end

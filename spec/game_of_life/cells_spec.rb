@@ -21,5 +21,10 @@ module GameOfLife
       cells = Cells.new
       expect(cells.count).to eq(0)
     end
+
+    it 'count for collection with two cells is two' do
+      cells = Cells.new(cell_one, cell_two)
+      expect(cells.count).to eq(2)
+    end
   end
 end

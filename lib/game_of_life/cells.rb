@@ -10,7 +10,7 @@ module GameOfLife
     end
 
     def count
-      0
+      @cells.count
     end
   end
 end

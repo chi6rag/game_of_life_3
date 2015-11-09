@@ -4,7 +4,7 @@ module GameOfLife
       @cells = cells
     end
 
-    def alive?
+    def are_all_alive?
       @cells.each {|cell| return false unless cell.is_alive?}
       true
     end

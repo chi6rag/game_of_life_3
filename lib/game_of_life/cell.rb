@@ -6,5 +6,9 @@ module GameOfLife
     def live_neighbours(cells)
       [Cell.new(10, 10, false), Cell.new(10, 10, false)]
     end
+
+    def is_alive?
+      true
+    end
   end
 end

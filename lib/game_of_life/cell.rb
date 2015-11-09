@@ -18,8 +18,8 @@ module GameOfLife
 
     def ==(other)
       return false unless other.is_a?(Cell)
-      return false if((self.x != other.x) || (self.y == other.y) || (self.is_alive? == other.is_alive?))
-      true
+      return true if((self.x == other.x) && (self.y == other.y) && (self.is_alive? == other.is_alive?))
+      false
     end
   end
 end

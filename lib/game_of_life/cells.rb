@@ -14,7 +14,7 @@ module GameOfLife
     end
 
     def live_cells
-      [0, 0]
+      Cells.new(Cell.new(0, 0, true), Cell.new(0, 0, true))
     end
   end
 end

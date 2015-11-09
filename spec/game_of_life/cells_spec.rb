@@ -32,6 +32,11 @@ module GameOfLife
         cells = Cells.new(cell_one, cell_two)
         expect(cells.live_cells.count).to eq(2)
       end
+
+      it 'are Cells' do
+        cells = Cells.new(cell_one, cell_two)
+        expect(cells.live_cells).to be_a(Cells)
+      end
     end
   end
 end

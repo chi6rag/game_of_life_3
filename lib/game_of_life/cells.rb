@@ -14,7 +14,8 @@ module GameOfLife
     end
 
     def live_cells
-      Cells.new(Cell.new(0, 0, true), Cell.new(0, 0, true))
+      live_cells = @cells.select{|cell| cell.is_alive?}
+      Cells.new(*live_cells)
     end
   end
 end

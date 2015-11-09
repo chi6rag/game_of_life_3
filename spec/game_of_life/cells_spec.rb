@@ -37,6 +37,12 @@ module GameOfLife
         cells = Cells.new(cell_one, cell_two)
         expect(cells.live_cells).to be_a(Cells)
       end
+
+      it 'is one for a collection of a live cell and a dead cell' do
+        cell_two = Cell.new(2, 0, false)
+        cells = Cells.new(cell_one, cell_two)
+        expect(cells.live_cells.count).to eq(1)
+      end
     end
   end
 end

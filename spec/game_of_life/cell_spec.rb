@@ -31,6 +31,11 @@ module GameOfLife
       it 'is false when compared with non cell' do
         expect(cell == 1).to eq(false)
       end
+
+      it 'of cell with x=1, y=1 and alive=true is false when compared to cell with x=2, y=1 and alive=true' do
+        other_cell = Cell.new(2, 1, true)
+        expect(cell == other_cell).to eq(false)
+      end
     end
   end
 end

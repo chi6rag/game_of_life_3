@@ -26,7 +26,7 @@ module GameOfLife
     end
 
     def hash
-      1
+      [@x, @y, @is_alive].hash
     end
 
     private

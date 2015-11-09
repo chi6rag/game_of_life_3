@@ -55,6 +55,11 @@ module GameOfLife
         other_cell = Cell.new(1, 1, true)
         expect(cell.hash).to eq(other_cell.hash)
       end
+
+      it 'is different for two cells of different states' do
+        other_cell = Cell.new(2, 1, true)
+        expect(cell.hash).to_not eq(other_cell.hash)
+      end
     end
 
   end

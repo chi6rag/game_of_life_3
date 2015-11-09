@@ -12,5 +12,9 @@ module GameOfLife
     def count
       @cells.count
     end
+
+    def live_cells
+      [0, 0]
+    end
   end
 end

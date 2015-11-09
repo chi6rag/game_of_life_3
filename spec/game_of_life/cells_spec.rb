@@ -26,5 +26,12 @@ module GameOfLife
       cells = Cells.new(cell_one, cell_two)
       expect(cells.count).to eq(2)
     end
+
+    describe 'live cells' do
+      it 'are two for a collection of two live cells' do
+        cells = Cells.new(cell_one, cell_two)
+        expect(cells.live_cells.count).to eq(2)
+      end
+    end
   end
 end

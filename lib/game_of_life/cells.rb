@@ -19,7 +19,13 @@ module GameOfLife
     end
 
     def reject_cell(other_cell)
-      self
+      return self unless @cells.include?(other_cell)
+      remaining_cells = cells_after_rejection_of(other_cell)
+      Cells.new(remaining_cells)
+    end
+
+    def cells_after_rejection_of(other_cell)
+      @cells.reject{|cell| cell == other_cell}
     end
   end
 end

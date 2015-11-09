@@ -54,6 +54,12 @@ module GameOfLife
         result = cells.reject_cell(cell_three)
         expect(result).to eq(cells)
       end
+
+      it 'reduces cells count by 1 if present in collection' do
+        cells = Cells.new(cell_one, cell_two)
+        result = cells.reject_cell(cell_two)
+        expect(result.count).to eq(1)
+      end
     end
   end
 end

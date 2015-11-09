@@ -3,12 +3,18 @@ module GameOfLife
     let(:cell){Cell.new(1, 1, true)}
 
     describe 'live neighbours' do
-      it 'for cell with 2 live neighbours has count 2' do
-        neighbour_one   = Cell.new(0, 1, true)
-        neighbour_two   = Cell.new(2, 0, true)
-        neighbour_three = Cell.new(0, 0, false)
-        cells = Cells.new(cell, neighbour_one, neighbour_two, neighbour_three)
-        expect(cell.live_neighbours(cells).count).to eq(2)
+      let(:neighbour_one){Cell.new(0, 1, true)}
+      let(:neighbour_two){Cell.new(2, 0, true)}
+      let(:neighbour_three){Cell.new(0, 0, false)}
+
+      xit 'for cell with 2 live neighbours has count 2' do
+        neighbours = Cells.new(cell, neighbour_one, neighbour_two, neighbour_three)
+        expect(cell.live_neighbours(neighbours).count).to eq(2)
+      end
+
+      it 'for a cell are alive' do
+        neighbours = Cells.new(cell, neighbour_one, neighbour_two, neighbour_three)
+        expect(cell.live_neighbours(neighbours).are_all_alive?).to eq(true)
       end
     end
 

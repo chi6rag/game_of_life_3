@@ -5,11 +5,15 @@ module GameOfLife
     end
 
     def live_neighbours(cells)
-      [Cell.new(10, 10, false), Cell.new(10, 10, false)]
+      cells.live_cells
     end
 
     def is_alive?
       @is_alive
+    end
+
+    def ==(other)
+      false
     end
   end
 end

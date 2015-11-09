@@ -17,5 +17,9 @@ module GameOfLife
       live_cells = @cells.select{|cell| cell.is_alive?}
       Cells.new(*live_cells)
     end
+
+    def reject_cell(other_cell)
+      self
+    end
   end
 end

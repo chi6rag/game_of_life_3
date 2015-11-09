@@ -44,5 +44,16 @@ module GameOfLife
         expect(cells.live_cells.count).to eq(1)
       end
     end
+
+    describe 'rejection' do
+      let(:cell_two){Cell.new(2, 0, false)}
+
+      it 'does not take place if cell is not present in collection' do
+        cell_three = Cell.new(10, 10, false)
+        cells = Cells.new(cell_one, cell_two)
+        result = cells.reject_cell(cell_three)
+        expect(result).to eq(cells)
+      end
+    end
   end
 end

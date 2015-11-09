@@ -44,6 +44,11 @@ module GameOfLife
         end
       end
 
+      it 'is of cell with other cell with same states is symmetric' do
+        other_cell = Cell.new(1, 1, true)
+        expect(other_cell == cell).to eq(true)
+      end
     end
+    
   end
 end

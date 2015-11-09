@@ -9,7 +9,7 @@ module GameOfLife
     end
 
     def live_neighbours(cells)
-      cells.live_cells
+      cells.live_cells.reject_cell(self)
     end
 
     def is_alive?

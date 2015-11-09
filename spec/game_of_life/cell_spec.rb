@@ -7,7 +7,7 @@ module GameOfLife
       let(:neighbour_two){Cell.new(2, 0, true)}
       let(:neighbour_three){Cell.new(0, 0, false)}
 
-      xit 'for cell with 2 live neighbours has count 2' do
+      it 'for cell with 2 live neighbours has count 2' do
         neighbours = Cells.new(cell, neighbour_one, neighbour_two, neighbour_three)
         expect(cell.live_neighbours(neighbours).count).to eq(2)
       end

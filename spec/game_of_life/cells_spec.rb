@@ -16,5 +16,10 @@ module GameOfLife
         expect(cells.are_all_alive?).to eq(false)
       end
     end
+
+    it 'count for collection with zero cells is zero' do
+      cells = Cells.new
+      expect(cells.count).to eq(0)
+    end
   end
 end

@@ -8,5 +8,9 @@ module GameOfLife
       @cells.each {|cell| return false unless cell.is_alive?}
       true
     end
+
+    def count
+      0
+    end
   end
 end
